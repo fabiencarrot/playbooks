@@ -41,6 +41,6 @@
   handlers:
     - name: start apache
       service:
-        name=apache
+        name=apache2
         state=restarted
         enabled=yes
