@@ -23,8 +23,7 @@
       
     - git: 
        repo=https://github.com/aurelienmaury/cw-bundle-lamp.git
-       dest=/var/www/html
-       bare=yes
+       dest=/var/www/php
 
     - name: common aliases
       copy:
