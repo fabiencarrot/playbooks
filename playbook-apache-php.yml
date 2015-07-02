@@ -24,6 +24,12 @@
     - git: 
        repo=https://github.com/aurelienmaury/cw-bundle-lamp.git
        dest=/var/www/php
+       
+    - copy
+       src=lamp.conf
+       dest=/etc/apache2/sites-enabled/
+       owner=root
+       group=root
 
     - name: common aliases
       copy:
