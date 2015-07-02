@@ -24,13 +24,6 @@
     - git: 
        repo=https://github.com/aurelienmaury/cw-bundle-lamp.git
        dest=/var/www/php
-       
-    - name: default apache directory to php
-      file:
-        src=/var/www/php
-        dest=/var/www/html
-        force=yes
-        state=link
 
     - name: common aliases
       copy:
