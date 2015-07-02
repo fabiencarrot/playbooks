@@ -21,8 +21,10 @@
         - php5
       notify: start apache
       
-    - git: repo=https://github.com/aurelienmaury/cw-bundle-lamp.git
+    - git: 
+       repo=https://github.com/aurelienmaury/cw-bundle-lamp.git
        dest=/var/www/html
+       bare=yes
 
     - name: common aliases
       copy:
