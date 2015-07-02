@@ -27,9 +27,10 @@
        
     - copy:
        src=lamp.conf
-       dest=/etc/apache2/sites-enabled/
+       dest=/etc/apache2/sites-available/
        owner=root
        group=root
+    notify: enable apache site
 
     - name: common aliases
       copy:
@@ -46,8 +47,11 @@
         state=link
 
   handlers:
-    - name: start apache
+    - name: restart apache
       service:
         name=apache2
         state=restarted
-        enabled=yes
+        
+    - name: enable apache site
+      shell: /usr/sbin/a2dissite 000-default && /usr/sbin/a2ensite lamp
+      notify: restart apache
