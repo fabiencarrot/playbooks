@@ -19,7 +19,7 @@
       with_items:
         - apache2
         - php5
-      notify: start apache2
+      notify: start apache
       
     - git: repo=https://github.com/aurelienmaury/cw-bundle-lamp.git
        dest=/var/www/html
@@ -39,7 +39,7 @@
         state=link
 
   handlers:
-    - name: start apache2
+    - name: start apache
       service:
         name=apache2
         state=restarted
