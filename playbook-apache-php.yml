@@ -26,11 +26,11 @@
        dest=/var/www/php
        
     - copy:
-       src=lamp.conf
-       dest=/etc/apache2/sites-available/
-       owner=root
-       group=root
-       notify: enable apache site
+        src=lamp.conf
+        dest=/etc/apache2/sites-available/
+        owner=root
+        group=root
+      notify: enable apache site
 
     - name: common aliases
       copy:
