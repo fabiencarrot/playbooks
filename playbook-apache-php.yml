@@ -30,7 +30,7 @@
        dest=/etc/apache2/sites-available/
        owner=root
        group=root
-    notify: enable apache site
+       notify: enable apache site
 
     - name: common aliases
       copy:
