@@ -40,12 +40,6 @@
         group=root
         mode=0644
 
-    - name: default sh is bash
-      file:
-        src=/bin/bash
-        dest=/bin/sh
-        state=link
-
   handlers:
     - name: restart apache
       service:
