@@ -42,8 +42,8 @@
 
     - name: default sh is bash
       file:
-        dest=/bin/bash
-        src=/bin/sh
+        src=/bin/bash
+        dest=/bin/sh
         state=link
 
   handlers:
